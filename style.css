@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", "sans";
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+}
+
+h2,
+span {
+  cursor: pointer;
+}
+
+h2:hover,
+span:hover {
+  color: cyan !important;
+}
+
+main {
+  height: 575px;
+  width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(216, 50%, 16%);
+  padding: 25px;
+  padding-bottom: 0px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 10px rgba(8, 15, 30, 0.5),
+    0px 0px 30px 20px rgba(6, 15, 32, 0.4);
+}
+
+.nft {
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.nft img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nft img:hover + .view,
+.view:hover {
+  z-index: 1;
+  cursor: pointer;
+}
+
+.view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("./images/icon-view.svg") no-repeat center;
+  z-index: -1;
+  top: 0;
+  background-color: rgba(52, 226, 217, 0.6);
+  border-radius: 10px;
+}
+
+.article {
+  flex: 2;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  position: relative;
+}
+
+.article h2 {
+  color: white;
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.article p {
+  line-height: 1.5;
+}
+
+.info {
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.info,
+.price,
+.time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info p {
+  align-self: center;
+}
+
+.info img {
+  display: block;
+  height: 20px;
+}
+
+.price p {
+  color: cyan;
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.footer img {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: 1px;
+}
+
+.footer span {
+  color: white;
+}
+
+@media (min-width: 900px) {
+  main {
+    position: relative;
+    transform: scale(0.9);
+  }
+}
+
+/* Styles */
+/* ### Primary */
+/**/
+/* - Soft blue: hsl(215, 51%, 70%) */
+/* - Cyan: hsl(178, 100%, 50%) */
+/**/
+/* ### Neutral */
+/**/
+/* - Very dark blue (main BG): hsl(217, 54%, 11%) */
+/* - Very dark blue (card BG): hsl(216, 50%, 16%) */
+/* - Very dark blue (line): hsl(215, 32%, 27%) */
+/* - White: hsl(0, 0%, 100%) */
